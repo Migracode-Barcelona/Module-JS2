@@ -1,3 +1,0 @@
-function createLookup() {
-  // implementation here
-}
