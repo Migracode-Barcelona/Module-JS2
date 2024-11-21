@@ -11,6 +11,8 @@ const author = {
   alive: true,
 };
 
-for (const value of author) {
+for (const value of Object.values(author)) {
   console.log(value);
 }
+
+// Object.values(author) extracts all property values into new array

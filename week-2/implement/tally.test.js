@@ -1,3 +1,10 @@
+const tally = require("./tally.js");
+
+test("counts item", () => {
+  expect(tally(["a", "a", "a"])).toEqual({ a: 3 });
+  expect(tally(["a", "a", "b", "c"])).toEqual({ a: 2, b: 1, c: 1 });
+});
+
 /**
  * tally array
  *
