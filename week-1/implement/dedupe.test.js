@@ -24,3 +24,7 @@ test.todo("given an empty array, it returns an empty array");
 // Given an array with strings or numbers
 // When passed to the dedupe function
 // Then it should remove the duplicate values
+
+test("transform to the list of unique elements", () => {
+  expect(dedupe([1, 1, 1, 1, 2, 1, 3, 3])).toStrictEqual([1, 2, 3]);
+});

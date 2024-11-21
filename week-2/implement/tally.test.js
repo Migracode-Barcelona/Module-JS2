@@ -29,3 +29,8 @@
 // Given an invalid input like a string
 // When passed to tally
 // Then it should throw an error
+
+const tally = require("./tally.js");
+test("counts item", () => {
+  expect(tally(["a", "a", "a"])).toEqual({ a: 3 });
+});
