@@ -1,8 +1,6 @@
 const createLookup = require("./lookup.js");
 
 
-/* ======= Test suite is provided below... =====
- */
 
 test("converts a single pair of currency codes", () => {
   expect(createLookup([["GB", "GBP"]])).toEqual({

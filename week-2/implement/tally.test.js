@@ -1,5 +1,30 @@
+
+const tally = require("./tally.js");
+
+
+test('returns correctly the counts in an object', () => {
+    expect(tally(["Hamburg", "Berlin", "Hamburg"])).toEqual({"Hamburg":2, "Berlin":1})
+});
+
+test('given an empty array it would give me an empty object', ()=>{
+expect(tally([])).toEqual({})
+});
+
+test('given only duplicates it also works', () => {
+    expect(tally(["Hamburg", "Hamburg"])).toEqual({"Hamburg": 2})
+});
+
+test('given an incorrect type of element like an object it should throw an error', () => {
+    expect(() => tally({cat: 1})).toThrow("Input must be an array");
+})
+
 /**
- * tally array
+ * 
+ 
+ * 
+ 
+ * 
+ * 
  *
  * In this task, you'll need to implement a function called tally
  * that will take a list of items and count the frequency of each item
