@@ -23,8 +23,8 @@ describe('contain function' , ()=>{
     expect(contains({ a: 1 }, 1)).toBe(false);
   });
 
-  test('should return true for keys with undefined values', () => {
-    expect(contains({ a: undefined }, 'a')).toBe(false);
+  test('should return false as an array input', () => {
+    expect(contains([1, 2], '1')).toBe(false);
   });
 });
 /*

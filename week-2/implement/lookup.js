@@ -1,7 +1,7 @@
 function createLookup(countryCurrencyPairs) {
   const lookUp ={};
-  for (const [countryCode,CurrencyCode] of countryCurrencyPairs) {
-    lookUp[countryCode] = CurrencyCode;
+  for (const [countryCode,currencyCode] of countryCurrencyPairs) {
+    lookUp[countryCode] = currencyCode;
   }
   return lookUp;
 }
