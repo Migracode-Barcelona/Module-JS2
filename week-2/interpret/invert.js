@@ -7,20 +7,32 @@
 // E.g. invert({x : 10, y : 20}), target output: {"10": "x", "20": "y"}
 
 function invert(obj) {
-  const invertedObj = {};
+  const invertedObj = { };
 
   for (const [key, value] of Object.entries(obj)) {
-    invertedObj.key = value;
+    invertedObj[value] = key;
   }
 
   return invertedObj;
 }
 
+const objectOne = { "Ly-Ly": "26"}
+let result = invert(objectOne)
+
+console.log(result)
+
+
 // a) What is the current return value when invert is called with { a : 1 }
+
+//obj[myKey] = value;
 
 // b) What is the current return value when invert is called with { a: 1, b: 2 }
 
+// 
+
 // c) What is the target return value when invert is called with {a : 1, b: 2}
+
+// { "1": "a", "2": "b" }
 
 // c) What does Object.entries return? Why is it needed in this program?
 
