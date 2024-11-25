@@ -1,4 +1,6 @@
 // Predict and explain first...
+//Answer:We can not access object with index instead we access them with the key, that is why we mutilate it by using the ".",
+//and then the key to get access to the house number.
 
 // This code should log out the houseNumber from the address object
 // but it isn't working...
