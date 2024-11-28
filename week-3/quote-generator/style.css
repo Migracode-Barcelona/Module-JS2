@@ -1,1 +1,39 @@
 /** Write your CSS in here **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(98, 0, 255);
+}
+#container {
+  color: rgb(149, 216, 191);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  min-height: 60vh;
+}
+
+#quote {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#author {
+  font-size: 1rem;
+  text-align: end;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#new-quote {
+  padding: 10px;
+  background-color: aquamarine;
+}
