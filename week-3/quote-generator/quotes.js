@@ -16,15 +16,18 @@
 // pickFromArray(['a','b','c','d'])     // maybe returns 'c'
 
 // You don't need to change this function
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+function pickFromArray() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex];
+  document.getElementById("quote").textContent = `,, ${quote.quote}`; // Adding commas at the start
+  document.getElementById("author").textContent = `- ${quote.author}`;
 }
-document.getElementById("new-quote").addEventListener("click",() =>{
-  const randomQuote = pickFromArray(quotes);
-  document.getElementById("quote").textContent = `"${randomQuote.quote}"`;
-  document.getElementById("author").textContent = `- ${randomQuote.author}`;
 
-})
+// Load a random quote when the page loads
+window.onload = pickFromArray;
+
+// Button functionality to load a new quote on click
+document.getElementById("new-quote").addEventListener("click", pickFromArray);
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [
