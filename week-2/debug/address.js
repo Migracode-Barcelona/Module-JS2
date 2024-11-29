@@ -12,4 +12,6 @@ const address = {
   postcode: "XYZ 123",
 };
 
-console.log(`My house number is ${address[0]}`);
+console.log(`My house number is ${address.houseNumber}`);
+
+//Using dot notation to target the object key value and not index position
