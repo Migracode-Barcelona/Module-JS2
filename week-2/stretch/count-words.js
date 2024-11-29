@@ -26,3 +26,36 @@
 
 3. Order the results to find out which word is the most common in the chapter
 */
+
+function countWords(inputString) {
+  if (typeof inputString !== "string") {
+    throw new Error("Invalid input: Input must be a string");
+  }
+
+  //Normalize the string (remove punctuation and convert to lowercase)
+  const cleanedString = inputString
+    .replace(/[.,!?]/g, "") // Remove punctuation
+    .toLowerCase(); // Convert to lowercase for case insensitivity
+
+  // Split the string into words
+  const words = cleanedString.split(/\s+/); // Split by spaces (handles multiple spaces)
+
+  // Count the frequency of each word
+  const wordCounts = {};
+  for (const word of words) {
+    if (word) {
+      // Avoid empty strings
+      wordCounts[word] = (wordCounts[word] || 0) + 1;
+    }
+  }
+
+  //  (Advanced Challenge 3): Sort by frequency (optional)
+  const sortedWordCounts = Object.entries(wordCounts)
+    .sort((a, b) => b[1] - a[1]) // Sort by count in descending order
+    .reduce((acc, [word, count]) => {
+      acc[word] = count;
+      return acc;
+    }, {});
+
+  return sortedWordCounts;
+}
