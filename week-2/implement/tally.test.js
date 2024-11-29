@@ -29,3 +29,34 @@
 // Given an invalid input like a string
 // When passed to tally
 // Then it should throw an error
+
+const tally = require("./tally");
+
+// Test for valid inputs
+test("returns correct counts for a single item array", () => {
+  expect(tally(["a"])).toEqual({ a: 1 });
+});
+
+test("returns correct counts for multiple identical items", () => {
+  expect(tally(["a", "a", "a"])).toEqual({ a: 3 });
+});
+
+test("returns correct counts for multiple unique items", () => {
+  expect(tally(["a", "a", "b", "c"])).toEqual({ a: 2, b: 1, c: 1 });
+  expect(tally(["x", "y", "z"])).toEqual({ x: 1, y: 1, z: 1 });
+});
+
+// Test for an empty array
+test("returns an empty object for an empty array", () => {
+  expect(tally([])).toEqual({});
+});
+
+// Test for arrays with mixed types
+test("returns correct counts for arrays with different types of items", () => {
+  expect(tally([1, "a", 1, "b", "a"])).toEqual({ 1: 2, a: 2, b: 1 });
+  expect(tally([true, false, true, null])).toEqual({
+    true: 2,
+    false: 1,
+    null: 1,
+  });
+});
