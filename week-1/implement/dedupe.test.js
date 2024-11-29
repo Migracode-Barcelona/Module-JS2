@@ -4,7 +4,7 @@ Dedupe Array
 
 📖 Dedupe means **deduplicate**
 
-In this kata, you will need to deduplicate the elements of an array
+In this kata89, you will need to deduplicate the elements of an array
 
 E.g. dedupe(['a','a','a','b','b','c']) target output: ['a','b','c']
 E.g. dedupe([5, 1, 1, 2, 3, 2, 5, 8]) target output: [5, 1, 2, 3, 8]
