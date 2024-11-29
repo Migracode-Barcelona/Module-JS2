@@ -12,4 +12,6 @@ const recipe = {
 
 console.log(`${recipe.title} serves ${recipe.serves}
   ingredients:
-${recipe}`);
+${recipe.ingredients.join("\n")}`);
+
+//To place every ingredient on a new line you can join every ingredient separated by a new line

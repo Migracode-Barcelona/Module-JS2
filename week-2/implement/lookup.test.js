@@ -1,3 +1,16 @@
+const createLookup = require("./lookup");
+
+// ======= Test suite is provided below... =======
+
+test("converts a single pair of currency codes", () => {
+  expect(createLookup([["GB", "GBP"]])).toEqual({
+    GB: "GBP",
+  });
+  expect(createLookup([["DE", "EUR"]])).toEqual({
+    DE: "EUR",
+  });
+});
+
 /*
 
 Create a lookup object of key value pairs from an array of code pairs
@@ -29,3 +42,18 @@ It should return:
    'CA': 'CAD'
  }
 */
+
+test("creates a country currency code lookup for multiple codes", () => {
+  const COUNTRY_CURRENCY_CODES = [
+    ["GB", "GBP"],
+    ["DE", "EUR"],
+    ["NG", "NGN"],
+    ["MX", "MXN"],
+  ];
+  expect(createLookup(COUNTRY_CURRENCY_CODES)).toEqual({
+    GB: "GBP",
+    DE: "EUR",
+    NG: "NGN",
+    MX: "MXN",
+  });
+});
