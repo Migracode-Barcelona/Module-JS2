@@ -12,7 +12,6 @@ as the object doesn't contains a key of 'c'
 */
 
 // Acceptance criteria:
-
 // Given a contains function
 // When passed an object and a property name
 // Then it should return true if the object contains the property, false otherwise
@@ -32,3 +31,22 @@ as the object doesn't contains a key of 'c'
 // Given invalid parameters like arrays
 // When passed to contains
 // Then it should return false or throw an error
+
+test('when passed a correct key to a property returns true', () => {
+    expect(contains({ a: 1 }, 'a')).toBe(true);
+})
+
+test('when passed an empty object return false', () => {
+    expect(contains({}, 'a')).toBe(false);
+});
+
+test('when passed an incorrect key to a property returns false', () => {
+    expect(contains({a:1}, 'b')).toBe(false);
+});
+
+test('when passed an array returns false',() => {
+    const array = ['a', 'b', 'c'];
+    expect(contains (array, 'b')).toBe(false)
+});
+
+
