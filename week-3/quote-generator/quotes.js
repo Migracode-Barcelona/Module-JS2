@@ -14,6 +14,27 @@
 // Examples of use
 // ---------------
 // pickFromArray(['a','b','c','d'])     // maybe returns 'c'
+//Pseudocode
+//find and declare button, find and declare p with the quote, find and declare p with author
+//add eventlistener to the button so that when clicked it changes both p
+//
+//
+//
+
+let quote = document.getElementById("quote")
+let author = document.getElementById("author")
+let buttonQuote = document.getElementById("new-quote")
+
+buttonQuote.addEventListener("click", clickButton)
+
+function clickButton(){
+
+  let newRandomQuote = quotes[Math.floor(Math.random()*quotes.length)]
+
+  quote.innerHTML = `${newRandomQuote.quote}`
+  author.innerHTML = `by ${newRandomQuote.author}`
+}
+
 
 // You don't need to change this function
 function pickFromArray(choices) {
