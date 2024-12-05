@@ -26,6 +26,10 @@ const books = [
 Render the list of books on the page. Each book should have a title, author and image and a background colour that is set dependent on whether we have read the book or not.
 
 ## 🧭 Strategy
+1. find the place in the HTML to put the list
+2. find a structure for each list item
+3. think about how to access item
+4. set background color depending on object in css
 
 Try and outline your strategy / approach for solving this problem before you get started. There is also a test suite provided to help you meet the acceptance criteria in the issue.
 

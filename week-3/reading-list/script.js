@@ -1,3 +1,19 @@
+
+const list = document.getElementById("reading-list")
+
+// either document.createElement()?? or do .innerHTML ?
+
+function renderBooks(books) { for (let i= 0; i< books.length; i++) {
+
+  let title = books[i].title
+  let author = books[i].author
+  let status = books[i].alreadyRead
+  let cover = books[i].bookCoverImage
+}
+            
+
+}
+
 // for the tests, do not modify this array of books
 const books = [
   {
