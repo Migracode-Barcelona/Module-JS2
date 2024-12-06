@@ -1,3 +1,38 @@
+function readingList(books){
+
+const list = document.getElementById("reading-list");
+
+
+books.forEach((book) => {
+
+
+  const bookList = document.createElement(li);
+  bookList.style.lisStyle = "none";
+
+
+  if(book.alreadyRead){
+
+    bookList.style.backgroundColor = "green";
+
+  } else {
+
+    bookList.style.backgroundColor ="red";
+  }
+
+  
+
+
+  
+
+
+
+ bookList(li);
+});
+}
+
+
+
+
 // for the tests, do not modify this array of books
 const books = [
   {
@@ -21,3 +56,4 @@ const books = [
   },
 ];
 
+ readingList(books);
