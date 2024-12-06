@@ -1,14 +1,20 @@
 function readingList(books) {
+
   const list = document.getElementById("reading-list");
 
   books.forEach((book) => {
+
+
     const bookList = document.createElement("li");
-    bookList.style.listStyle = "none";
+
 
     if (book.alreadyRead) {
-      bookList.style.backgroundColor = "#d4edda";
+
+      bookList.style.backgroundColor = "#6AEA61";
+
     } else {
-      bookList.style.backgroundColor = "#f8d7da";
+
+      bookList.style.backgroundColor = "#E83D3D";
     }
 
     const title = document.createElement("h2");
@@ -21,9 +27,7 @@ function readingList(books) {
 
     const image = document.createElement("img");
     image.src = book.bookCoverImage;
-    image.alt = `Cover of ${book.title}`;
-    image.style.width = "100px";
-    image.style.height = "auto";
+    image.style.width = "150px";
     bookList.appendChild(image);
 
     list.appendChild(bookList);
