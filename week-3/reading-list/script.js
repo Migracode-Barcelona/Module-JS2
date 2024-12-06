@@ -21,12 +21,30 @@ books.forEach((book) => {
 
   
 
+    const title = document.createElement("h2");
+    title.innerText = book.title;
+bookList.appendChild(title);
+
+
+const author = document.createElement("p")
+author.innerText = book.author;
+bookList.appendChild(author);
+
+
+const image = document.createElement("img")
+
+image.src = book.bookCoverImage;
+bookList.appendChild(image);
+  
+
+
+
 
   
 
 
 
- bookList(li);
+ list.appendChild(bookList);
 });
 }
 
