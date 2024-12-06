@@ -1,55 +1,34 @@
-function readingList(books){
+function readingList(books) {
+  const list = document.getElementById("reading-list");
 
-const list = document.getElementById("reading-list");
+  books.forEach((book) => {
+    const bookList = document.createElement("li");
+    bookList.style.listStyle = "none";
 
-
-books.forEach((book) => {
-
-
-  const bookList = document.createElement(li);
-  bookList.style.lisStyle = "none";
-
-
-  if(book.alreadyRead){
-
-    bookList.style.backgroundColor = "green";
-
-  } else {
-
-    bookList.style.backgroundColor ="red";
-  }
-
-  
+    if (book.alreadyRead) {
+      bookList.style.backgroundColor = "#d4edda";
+    } else {
+      bookList.style.backgroundColor = "#f8d7da";
+    }
 
     const title = document.createElement("h2");
     title.innerText = book.title;
-bookList.appendChild(title);
+    bookList.appendChild(title);
 
+    const author = document.createElement("p");
+    author.innerText = `Author: ${book.author}`;
+    bookList.appendChild(author);
 
-const author = document.createElement("p")
-author.innerText = book.author;
-bookList.appendChild(author);
+    const image = document.createElement("img");
+    image.src = book.bookCoverImage;
+    image.alt = `Cover of ${book.title}`;
+    image.style.width = "100px";
+    image.style.height = "auto";
+    bookList.appendChild(image);
 
-
-const image = document.createElement("img")
-
-image.src = book.bookCoverImage;
-bookList.appendChild(image);
-  
-
-
-
-
-  
-
-
-
- list.appendChild(bookList);
-});
+    list.appendChild(bookList);
+  });
 }
-
-
-
 
 // for the tests, do not modify this array of books
 const books = [
@@ -74,4 +53,4 @@ const books = [
   },
 ];
 
- readingList(books);
+readingList(books);
