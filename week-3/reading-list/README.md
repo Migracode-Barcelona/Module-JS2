@@ -36,3 +36,21 @@ Try and outline your strategy / approach for solving this problem before you get
 The end result should look something like this
 
 ![reading-list](reading-list.png)
+
+
+
+Here are some checklist-style acceptance criteria for the reading list problem:
+
+A <ul> element is created to contain the list of books
+For each book object in the books array:
+
+A <li> element is created
+The book title is displayed in a <p> element
+The book author is displayed in a <p> element
+An <img> element is added with the source set to the book’s cover image URL
+The <ul> containing the book list is added to the DOM inside the element with id “content”
+Books that have already been read have a green background
+Books that have not yet been read have a red background
+The completed list matches the provided design example
+No errors occur when iterating through the books array
+The page is visually appealing
