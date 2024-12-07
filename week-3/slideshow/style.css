@@ -10,38 +10,33 @@
     --color-red: #4f0b06;
   
     --font-headings: 'Monospace';
-    --font-buttons: 'Raleway', sans-serif;
-    --font-body: 'Roboto', sans-serif;
   
     --spacing-small: 8px;
     --spacing-medium: 16px;
-    --spacing-large: 32px;
   }
 
   .button-section {
     display: flex;
     justify-content: center; 
-    align-items: center; /* Center buttons horizontally */
+    align-items: center; 
     margin: var(--spacing-medium) 0; 
 }
 
  
 img {
-    max-width: 88%;
+    max-width: 82%;
     height: auto;
     border-radius: 5px;
-    margin: var(--spacing-medium) auto; /* Center the image horizontally */
+    margin: var(--spacing-medium) auto; /* !!!Centering image horizontally */
 }
   
   h2{
    font-family: var(--font-headings);
 
-
   }
 
   body {
     background-color: var(--color-white);
-    font-family: var(--font-body);
     margin: 0;
     padding: 0;
     color: var(--color-cherry);
@@ -64,4 +59,3 @@ img {
   button:hover {
     background-color: var(--color-red);
   }
-  
