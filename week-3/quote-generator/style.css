@@ -1,1 +1,82 @@
-/** Write your CSS in here **/
+/* General reset for margins and padding */
+body,
+h1,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1 {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffa500;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+/* Quote container */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 80%;
+  height: fit-content;
+  text-align: center;
+}
+
+/* Styling for the quote */
+#quote {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff8c00; /* Dark orange */
+  margin-bottom: 80px;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* Styling for the author */
+
+#author {
+  display: flex;
+  font-size: 23px;
+  font-weight: 700;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  align-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.quote-container div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Button styling */
+#new-quote {
+  display: flex;
+  background-color: #ff8c00;
+  color: #ffffff;
+  width: 150px;
+  height: 50px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
