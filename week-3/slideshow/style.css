@@ -7,11 +7,9 @@
   :root {
     --color-black: #000;
     --color-white: #F4F3E6;
-    --color-peach: #e0b4e4;
-    --color-cherry: #51035d;
-    --color-orange: #0c3d11;
+    --color-red: #4f0b06;
   
-    --font-headings: 'Questrial', sans-serif;
+    --font-headings: 'Monospace';
     --font-buttons: 'Raleway', sans-serif;
     --font-body: 'Roboto', sans-serif;
   
@@ -19,8 +17,30 @@
     --spacing-medium: 16px;
     --spacing-large: 32px;
   }
+
+  .button-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Center buttons horizontally */
+    margin: var(--spacing-medium) 0; 
+}
+
+ 
+img {
+    max-width: 88%;
+    height: auto;
+    border-radius: 5px;
+    margin: var(--spacing-medium) auto; /* Center the image horizontally */
+}
   
+  h2{
+   font-family: var(--font-headings);
+
+
+  }
+
   body {
+    background-color: var(--color-white);
     font-family: var(--font-body);
     margin: 0;
     padding: 0;
@@ -42,6 +62,6 @@
   }
   
   button:hover {
-    background-color: var(--color-orange);
+    background-color: var(--color-red);
   }
   
