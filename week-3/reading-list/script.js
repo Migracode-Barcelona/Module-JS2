@@ -21,3 +21,32 @@ const books = [
   },
 ];
 
+// Function to render the reading list
+function readingList(books) {
+  books.forEach((book) => {
+    // Create a list item for each book
+    const listItem = document.createElement("li");
+    listItem.style.border = "1px solid #ccc";
+    listItem.style.padding = "10px";
+    listItem.style.marginBottom = "10px";
+    listItem.style.listStyleType = "none";
+
+    // Set the background color based on whether the book has been read
+    listItem.style.backgroundColor = book.alreadyRead ? "#DFFFD5" : "#FFD5D5";
+
+    // Create the content for the list item
+    listItem.innerHTML = `
+      <h3>${book.title}</h3>
+      <p><strong>Author:</strong> ${book.author}</p>
+      <img src="${book.bookCoverImage}" alt="${book.title} cover" style="max-width: 150px; display: block; margin-top: 10px;">
+    `;
+
+    // Append the list item to the reading list
+    readingList.appendChild(listItem);
+  });
+}
+
+// Call the function to render the books
+readingList(books);
+
+document.body.append(readingList(books));
