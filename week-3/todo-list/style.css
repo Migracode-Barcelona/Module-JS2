@@ -1,1 +1,167 @@
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #007bbf;
+}
+.todo-heading {
+    text-align: center;
+    /* Center the heading */
+    font-size: 2rem;
+    /* Increase font size for emphasis */
+    color: #007bff;
+    /* Match the primary button color */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    padding: 10px 0;
+    /* Underline effect */
+    font-weight: bold;
+    /* Make it stand out */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Buttons Styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s;
+}
+
+button[type="submit"] {
+    background: #007bff;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+#remove-all-completed {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+#remove-all-completed:hover {
+    background: #e63946;
+}
+
+/* Add some spacing */
+form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* List Items */
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ffffff, #f0f8ff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons inside List Items */
+ul li button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+ul li button:first-of-type {
+    background: #00aaff;
+    /* Green for completed */
+    color: #fff;
+}
+
+ul li button:first-of-type:hover {
+    background: #00aaff;
+    transform: scale(1.1);
+}
+
+ul li button:last-of-type {
+    background: #dc3545;
+    /* Red for delete */
+    color: #fff;
+    margin-left: 8px;
+}
+
+ul li button:last-of-type:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+    }
+}
