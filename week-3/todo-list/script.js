@@ -1,3 +1,8 @@
+let inputField = document.getElementById("input-field")
+let buttonAddTodo = document.getElementById("add-todo")
+let buttonDeleteLastTodo = document.getElementById("remove-last-todo")
+let buttonDeleteAllCompleted = document.getElementById("remove-all-completed")
+
 function populateTodoList(todos) {
   let list = document.getElementById("todo-list");
   // Write your code to create todo list elements with completed and delete buttons here, all todos should display inside the "todo-list" element.
@@ -10,7 +15,15 @@ let todos = [
   { task: "Do the shopping", completed: false },
 ];
 
-populateTodoList(todos);
+populateTodoList(todos){
+
+  var newTodo = document.createElement('li');
+newTodo.innerHTML = ` 
+<h3 id="title-author"> ${title} written by ${author}</h3>
+ <img id="bookcover" src= "${cover}"></img>
+`
+}
+
 
 // This function will take the value of the input field and add it as a new todo to the bottom of the todo list. These new todos will need the completed and delete buttons adding like normal.
 function addNewTodo(event) {
