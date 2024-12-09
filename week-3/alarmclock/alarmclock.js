@@ -1,45 +1,25 @@
+function setAlarm() {}
 
-let alarmDisplay = document.getElementById("timeRemaining");
-let inputField = document.getElementById("alarmSet");
+// DO NOT EDIT BELOW HERE
 
-let timerInterval;
+var audio = new Audio("alarmsound.mp3");
 
-function setAlarm() {
-  let time = parseInt(inputField.value, 10);
+function setup() {
+  document.getElementById("set").addEventListener("click", () => {
+    setAlarm();
+  });
 
-  if (isNaN(time) || time < 0) {
-    alert("Please enter a valid positive number!");
-    return;
-  }
-
-  updateDisplay(time); 
-  clearInterval(timerInterval); 
-
-  timerInterval = setInterval(() => {
-    if (time > 0) {
-      time--; 
-      updateDisplay(time); 
-    } else {
-      clearInterval(timerInterval); 
-      playAlarm(); 
-    }
-  }, 1000); 
-}
-
-function updateDisplay(time) {
-  const minutes = Math.floor(time / 60).toString().padStart(2, "0");
-  const seconds = (time % 60).toString().padStart(2, "0");
-  alarmDisplay.innerHTML = `Time Remaining: ${minutes}:${seconds}`;
+  document.getElementById("stop").addEventListener("click", () => {
+    pauseAlarm();
+  });
 }
 
 function playAlarm() {
-  const audio = new Audio("alarmsound.mp3");
   audio.play();
 }
 
-function stopAlarm() {
-  clearInterval(timerInterval);
+function pauseAlarm() {
+  audio.pause();
 }
 
-document.getElementById("set").addEventListener("click", setAlarm);
-document.getElementById("stop").addEventListener("click", stopAlarm);
+window.onload = setup;
