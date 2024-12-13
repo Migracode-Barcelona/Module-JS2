@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title here</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <form>
       <div>
-        <input type="text" placeholder="New todo..." />
+        <h2>
+          To Do List
+        </h2>
       </div>
       <div>
-        <button type="submit">Add Todo</button>
+        <input type="text" id= "input-field" placeholder="New to do..." />
+      </div>
+      <div>
+        <button id="add-todo" type="submit">Add Todo</button>
+        <button
+        type="button"
+        id="remove-last-todo"
+        class="btn btn-primary mb-3"
+      >
+        Remove last todo
+      </button>
         <button
           type="button"
           id="remove-all-completed"
@@ -22,6 +34,10 @@
         </button>
       </div>
     </form>
+    <div>
+      <ul list="todo-list">
+      </ul>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
