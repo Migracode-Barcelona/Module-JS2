@@ -1,24 +1,37 @@
-// DO NOT EDIT BELOW HERE
+const theQuote = document.getElementById("quote");
+const quoteWriter = document.getElementById("author"); 
+const quoteButton = document.getElementById("new-quote");
 
-// pickFromArray is a function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item at random from the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray(['a','b','c','d'])     // maybe returns 'c'
-
-// You don't need to change this function
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+function quoteGenerator(){
+ const newQuote = pickFromArray(quotes);
+theQuote.textContent = `"${newQuote.quote}"`
+quoteWriter.textContent =  `"${newQuote.author}"`
 }
+
+quoteButton.addEventListener("click", quoteGenerator);
+
+window.addEventListener("load", quoteGenerator)
+  // DO NOT EDIT BELOW HERE
+
+  // pickFromArray is a function which will return one item, at
+  // random, from the given array.
+  //
+  // Parameters
+  // ----------
+  // choices: an array of items to pick from.
+  //
+  // Returns
+  // -------
+  // One item at random from the given array.
+  //
+  // Examples of use
+  // ---------------
+  // pickFromArray(['a','b','c','d'])     // maybe returns 'c'
+
+  // You don't need to change this function
+  function pickFromArray(choices) {
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
