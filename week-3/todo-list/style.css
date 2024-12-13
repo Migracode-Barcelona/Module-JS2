@@ -23,11 +23,16 @@
 
   body {
     font-family: var(--font-body);
+    font-size: large;
     margin: 0;
     padding: 0;
     color: var(--color-cherry);
     background-color: var(--color-white);
     text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   button {
@@ -45,7 +50,7 @@
   input{
     font-family: var(--font-headings);
     font-size: 1rem;
-    color: var(--color-white);
+    color: var( --color-black);
     border: black;
     padding: var(--spacing-small);
     border-radius: 5px;
@@ -55,4 +60,8 @@
   
   button:hover {
     background-color: var(--color-cherry);
+  }
+
+  .completed {
+    text-decoration: line-through;
   }
