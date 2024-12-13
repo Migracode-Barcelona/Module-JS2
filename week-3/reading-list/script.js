@@ -1,3 +1,39 @@
+function readingList(books) {
+
+  const list = document.getElementById("reading-list");
+
+  books.forEach((book) => {
+
+
+    const bookList = document.createElement("li");
+
+
+    if (book.alreadyRead) {
+
+      bookList.style.backgroundColor = "#6AEA61";
+
+    } else {
+
+      bookList.style.backgroundColor = "#E83D3D";
+    }
+
+    const title = document.createElement("h2");
+    title.innerText = book.title;
+    bookList.appendChild(title);
+
+    const author = document.createElement("p");
+    author.innerText = `Author: ${book.author}`;
+    bookList.appendChild(author);
+
+    const image = document.createElement("img");
+    image.src = book.bookCoverImage;
+    image.style.width = "150px";
+    bookList.appendChild(image);
+
+    list.appendChild(bookList);
+  });
+}
+
 // for the tests, do not modify this array of books
 const books = [
   {
@@ -21,3 +57,4 @@ const books = [
   },
 ];
 
+readingList(books);

@@ -1,3 +1,25 @@
+
+function countWords(string){
+
+const words = string.split(/\s+/);
+
+
+  const wordCount ={};
+
+
+  for ( const word of words){
+    if (word){
+      wordCount[word] = (wordCount[word] || 0) +1;
+    }
+  }
+
+  return wordCount
+
+
+}
+
+
+console.log(countWords("hi hi captain"))
 /*
   Count the number of times a word appears in a given string.
 
