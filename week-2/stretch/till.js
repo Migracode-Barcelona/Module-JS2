@@ -1,4 +1,4 @@
-// totalTill takes an object representing coins in a till
+//totalTill takes an object representing coins in a till
 
 // Given an object of coins
 // When this till object is passed to totalTill
