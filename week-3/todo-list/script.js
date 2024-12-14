@@ -1,25 +1,64 @@
-function populateTodoList(todos) {
-  let list = document.getElementById("todo-list");
-  // Write your code to create todo list elements with completed and delete buttons here, all todos should display inside the "todo-list" element.
-}
+let inputField = document.getElementById("input-field")
+let buttonAddTodo = document.getElementById("add-todo")
+let buttonDeleteLastTodo = document.getElementById("remove-last-todo")
+let buttonDeleteAllCompleted = document.getElementById("remove-all-completed")
+let list = document.getElementById("todo-list");
 
-// These are the same todos that currently display in the HTML
-// You will want to remove the ones in the current HTML after you have created them using JavaScript
-let todos = [
-  { task: "Wash the dishes", completed: false },
-  { task: "Do the shopping", completed: false },
-];
 
-populateTodoList(todos);
+buttonAddTodo.addEventListener("click", populateTodoList)
 
-// This function will take the value of the input field and add it as a new todo to the bottom of the todo list. These new todos will need the completed and delete buttons adding like normal.
-function addNewTodo(event) {
-  // The code below prevents the page from refreshing when we click the 'Add Todo' button.
+
+function populateTodoList(event) {
+
+  let inputFieldValue = inputField.value;
+
   event.preventDefault();
-  // Write your code here... and remember to reset the input field to be blank after creating a todo!
+  if (inputFieldValue.trim() === "") {
+    // note to self- need to consider always the case wehere nothing is in here if the input's empty, do nothing
+    return;
+  }
+addNewTodo(inputFieldValue);
 }
+
+function addNewTodo(inputFieldValue) {
+  event.preventDefault();
+
+  var newTodo = document.createElement("li");
+  newTodo.innerHTML = `<p>- ${inputFieldValue}</p> `;
+  addStrikeThroughToggle(newTodo);
+  list.appendChild(newTodo);
+
+  inputField.value = ""; 
+}
+
+
+function addStrikeThroughToggle(todoItem) {
+  todoItem.addEventListener("click", () => {
+    todoItem.classList.toggle("completed");
+  });
+}
+
+
+function deleteLast(){
+  buttonDeleteLastTodo.addEventListener('click', function() {
+    list.removeChild(list.lastElementChild)  })
+}
+deleteLast()
+
 
 // Advanced challenge: Write a fucntion that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
 function deleteAllCompletedTodos() {
-  // Write your code here...
+  buttonDeleteAllCompleted.addEventListener('click', function () {
+    // note to self - > you need to get all children of the list
+    let todos = list.querySelectorAll("li");
+    
+    // "Loop" through the todos as if it were an array and remove those with the 'completed' class
+    todos.forEach(todoItem => {
+      if (todoItem.classList.contains("completed")) {
+        list.removeChild(todoItem);
+      }
+    });
+  });
 }
+
+deleteAllCompletedTodos();
