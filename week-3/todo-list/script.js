@@ -14,7 +14,7 @@ function populateTodoList(event) {
 
   event.preventDefault();
   if (inputFieldValue.trim() === "") {
-    // if the input's empty, do nothing
+    // note to self- need to consider always the case wehere nothing is in here if the input's empty, do nothing
     return;
   }
 addNewTodo(inputFieldValue);
@@ -49,10 +49,10 @@ deleteLast()
 // Advanced challenge: Write a fucntion that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
 function deleteAllCompletedTodos() {
   buttonDeleteAllCompleted.addEventListener('click', function () {
-    // Get all children of the list
+    // note to self - > you need to get all children of the list
     let todos = list.querySelectorAll("li");
     
-    // Loop through the todos and remove those with the 'completed' class
+    // "Loop" through the todos as if it were an array and remove those with the 'completed' class
     todos.forEach(todoItem => {
       if (todoItem.classList.contains("completed")) {
         list.removeChild(todoItem);
