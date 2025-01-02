@@ -1,1 +1,161 @@
+/* Define CSS variables using :root */
+:root {
+  --primary-color: #5e72e4;
+  --primary-color-hover: #324cde;
+  --danger-color: #ff6347;
+  --danger-color-hover: #f04e3e;
+  --text-color: #4e4e4e;
+  --completed-bg-color: #e0e7ff;
+  --todo-bg-color: #fff;
+  --button-padding: 12px 20px;
+  --border-radius: 6px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.2);
+  --input-border-color: #ddd;
+  --input-focus-border-color: #5e72e4;
+  --completed-text-color: #6c757d;
+  --text-decoration-line-through: line-through;
+}
 
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+  background-color: var(--todo-bg-color);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: var(--button-padding);
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-border-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--input-focus-border-color);
+}
+
+button {
+  padding: var(--button-padding);
+  font-size: 1rem;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+#remove-all-completed {
+  background-color: var(--danger-color);
+  margin-top: 15px;
+}
+
+#remove-all-completed:hover {
+  background-color: var(--danger-color-hover);
+}
+
+/* Todo List Styles */
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--todo-bg-color);
+  padding: var(--button-padding);
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+li.completed {
+  background-color: var(--completed-bg-color);
+  text-decoration: var(--text-decoration-line-through);
+  color: var(--completed-text-color);
+}
+
+li .todo-text {
+  flex: 1;
+  padding-right: 10px;
+}
+
+li button {
+  background-color: var(--danger-color);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: var(--danger-color-hover);
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
