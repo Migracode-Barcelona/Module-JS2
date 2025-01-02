@@ -1,1 +1,53 @@
 /** Write your CSS in here **/
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#carousel-img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1c76bf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #2b577b;
+}
+
+button:focus {
+  outline: none;
+}
+
+.delay-control {
+  margin-top: 15px;
+}
+
+.delay-control input {
+  padding: 5px;
+  font-size: 16px;
+  width: 60px;
+  text-align: center;
+}
+
+.delay-control label {
+  margin: 10px;
+  font-size: medium;
+  font-weight: bold;
+}
