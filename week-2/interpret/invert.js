@@ -17,11 +17,16 @@ function invert(obj) {
 }
 
 // a) What is the current return value when invert is called with { a : 1 }
+// The return value is { key: 2 } because the code incorrectly assigns key as a fixed property, not using the object’s value as the key.
 
 // b) What is the current return value when invert is called with { a: 1, b: 2 }
+// The return value is { key: 2 } because of the same error in assigning the key.
 
 // c) What is the target return value when invert is called with {a : 1, b: 2}
+// The target output should be { "1": "a", "2": "b" }, where keys and values are swapped.
 
-// c) What does Object.entries return? Why is it needed in this program?
+// d) What does Object.entries return? Why is it needed in this program?
+// Object.entries returns an array of [key, value] pairs, allowing iteration over the object properties.
 
-// d) Explain why the current return value is different from the target output
+// e) Explain why the current return value is different from the target output
+// The return value is wrong because it assigns to invertedObj.key instead of using the value as the key and the key as the value.

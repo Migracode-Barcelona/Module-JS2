@@ -11,6 +11,9 @@ const author = {
   alive: true,
 };
 
-for (const value of author) {
+for (const value of Object.values(author)) {
   console.log(value);
 }
+
+//  The author object is not an iterable, so the loop cannot directly work with it.
+// Object.values(author) returns an array of the values from the author object.
