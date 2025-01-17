@@ -1,5 +1,7 @@
 // ======= Test suite is provided below... =======
 
+const createLookup = require("./lookup.js");
+
 test("converts a single pair of currency codes", () => {
   expect(createLookup([["GB", "GBP"]])).toEqual({
     GB: "GBP",
@@ -9,7 +11,27 @@ test("converts a single pair of currency codes", () => {
   });
 });
 
-test.todo("creates a country currency code lookup for multiple codes");
+test("creates a country currency code lookup for multiple codes", () => {
+  expect(
+    createLookup([
+      ["US", "USD"],
+      ["CA", "CAD"],
+    ])
+  ).toEqual({
+    US: "USD",
+    CA: "CAD",
+  });
+
+  expect(
+    createLookup([
+      ["JP", "JPY"],
+      ["CN", "CNY"],
+    ])
+  ).toEqual({
+    JP: "JPY",
+    CN: "CNY",
+  });
+});
 
 /*
 

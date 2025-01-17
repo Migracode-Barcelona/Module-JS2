@@ -12,4 +12,8 @@ const address = {
   postcode: "XYZ 123",
 };
 
-console.log(`My house number is ${address[0]}`);
+console.log(`My house number is ${address.houseNumber}`);
+
+// Explanation:
+// The original code uses address[0], which would try to access the first element of an array, but address is an object, not an array.
+//changing to address.houseNumber to correctly access the houseNumber property of the address object.
