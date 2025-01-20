@@ -1,1 +1,118 @@
+/* General Body Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
 
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Todo List Styles */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+#todo-list li span {
+  flex-grow: 1;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#todo-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#todo-list li:hover {
+  background-color: #f8f8f8;
+}
+
+/* Icons Styling */
+#todo-list li i {
+  font-size: 18px;
+  cursor: pointer;
+  color: #4caf50;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+#todo-list li i:hover {
+  color: #ff4d4d;
+}
+
+/* Remove all completed button */
+#remove-all-completed {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#remove-all-completed:hover {
+  background-color: #e53935;
+}
